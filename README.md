@@ -10,6 +10,10 @@ Docker build:
 Run server:
 `docker run -it -p 8000:8000 laravel-articles`
 
+Temporary substitutions:
+Build: `npm run dev` 
+Run server (different window): `php artisan serve`
+
 ## Helpful
 Install and use Node v16:
 `nvm install 16`
