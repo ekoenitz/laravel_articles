@@ -4,7 +4,7 @@ Simple full-stack project involving serving articles from a Laravel back-end to 
 # Commands
 
 ## Setup
-Install sail
+Install sail (select mysql and redis when prompted)
 `composer require laravel/sail --dev`
 `php artisan sail:install`
 
@@ -20,18 +20,14 @@ Install dependencies (may not be necessary):
 Start container:
 `sail up -d`
 
+Stop container:
+`sail stop`
+
 Run server:
 `sail npm run dev`
 (separate window)
 `sail artisan serve`
 Then navigate to http://127.0.0.1/ (the output says port 8000 but just ignore that)
-
-Run server:
-`docker run -it -p 8000:8000 laravel-articles`
-
-Temporary substitutions:
-Build: `npm run dev` 
-Run server (different window): `php artisan serve`
 
 ## Helpful
 Install and use Node v16:
