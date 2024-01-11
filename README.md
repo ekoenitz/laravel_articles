@@ -3,7 +3,7 @@ Simple full-stack project involving serving articles from a Laravel back-end to 
 
 # Commands
 
-## Setup
+### Setup
 Install sail (select mysql, phpmyadmin, and redis when prompted)
 `composer require laravel/sail --dev`
 `php artisan sail:install`
@@ -16,7 +16,7 @@ Install dependencies (may not be necessary):
 `sail composer require laravel/breeze --dev`
 `sail artisan breeze:install react`
 
-## Run
+### Run
 Start container:
 `sail up -d`
 
@@ -31,10 +31,15 @@ Run server:
 `sail artisan serve`
 Then navigate to http://127.0.0.1/ (the output says port 8000 but just ignore that)
 
-## Helpful
-Install and use Node v16:
-`nvm install 16`
-`nvm use 16`
+### Helpful
+Create migration:
+`sail artisan make:migration create_users_table`
+
+Run migration:
+`sail artisan migrate`
+
+Rollback migration:
+`sail artisan migrate:rollback --step=1`
 
 # Links
 
