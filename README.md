@@ -29,7 +29,7 @@ Run server:
 `sail npm run dev`
 (separate window)
 `sail artisan serve`
-Then navigate to http://127.0.0.1/ (the output says port 8000 but just ignore that)
+Then navigate to http://127.0.0.1 (the output says port 8000 but just ignore that)
 
 ### Helpful
 Create migration:
@@ -43,7 +43,18 @@ Rollback migration:
 
 # Links
 
-## Resources
+### Project
+Main webiste:
+`http://127.0.0.1`
+
+phpmyadmin:
+`localhost:800\80`
+
+### Resources
+Tailwind documentation:
+`https://tailwindcss.com/`
+
+### Tutorials 
 How to integrate React into a Laravel project:
 `https://github.com/aasoru/laravel-inertia-react-sail/blob/main/README.md`
 `https://qiita.com/Sho-taro/items/820e4117c5b5f4c6717f`
@@ -51,6 +62,6 @@ How to integrate React into a Laravel project:
 How to add phpmyadmin:
 `https://ecwebservices.medium.com/adding-phpmyadmin-to-laravel-sail-64823687e084`
 
-## Troubleshooting
+### Troubleshooting
 Docker not working on wsl:
 `https://github.com/docker/for-win/issues/13088#issuecomment-1536365076`
