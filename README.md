@@ -4,7 +4,7 @@ Simple full-stack project involving serving articles from a Laravel back-end to 
 # Commands
 
 ## Setup
-Install sail (select mysql and redis when prompted)
+Install sail (select mysql, phpmyadmin, and redis when prompted)
 `composer require laravel/sail --dev`
 `php artisan sail:install`
 
@@ -20,8 +20,10 @@ Install dependencies (may not be necessary):
 Start container:
 `sail up -d`
 
-Stop container:
+Stop container (when you change .env and docker configurations):
 `sail stop`
+Sometimes you'll need to run this version of the command and change DB_HOST to mysql in the .env file instead:
+`sail stop -v`
 
 Run server:
 `sail npm run dev`
@@ -40,6 +42,9 @@ Install and use Node v16:
 How to integrate React into a Laravel project:
 `https://github.com/aasoru/laravel-inertia-react-sail/blob/main/README.md`
 `https://qiita.com/Sho-taro/items/820e4117c5b5f4c6717f`
+
+How to add phpmyadmin:
+`https://ecwebservices.medium.com/adding-phpmyadmin-to-laravel-sail-64823687e084`
 
 ## Troubleshooting
 Docker not working on wsl:

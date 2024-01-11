@@ -24,6 +24,7 @@ services:
         depends_on:
             - mysql
             - redis
+            - phpmyadmin
     mysql:
         image: 'mysql/mysql-server:8.0'
         ports:
@@ -63,6 +64,19 @@ services:
                 - ping
             retries: 3
             timeout: 5s
+
+    phpmyadmin:
+        image: 'phpmyadmin:latest'
+        links:
+            - mysql:mysql
+        ports:
+            - 8080:80
+        networks:
+            - sail
+        environment:
+            MYSQL_USERNAME: '${DB_USERNAME}'
+            MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
+            PMA_HOST: mysql
 networks:
     sail:
         driver: bridge
