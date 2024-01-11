@@ -11,6 +11,9 @@ export default function Dashboard({ auth }) {
             <Head title="Dashboard" />
 
             <ArticleListing />
+            <ArticleListing />
+            <ArticleListing />
+            <ArticleListing />
         </AuthenticatedLayout>
     );
 }
