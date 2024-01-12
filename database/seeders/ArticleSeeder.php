@@ -16,7 +16,7 @@ class ArticleSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('articles')->insert([
+        DB::table('articles')->upsert([
             [
                 'id' => 1,
                 'title' => 'News A',
@@ -71,6 +71,6 @@ class ArticleSeeder extends Seeder
                 'author_id' => 2,
                 'created_at' => Carbon::now(),
             ],
-        ]);
+        ], 'id');
     }
 }
