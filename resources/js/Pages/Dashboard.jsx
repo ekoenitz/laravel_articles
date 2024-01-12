@@ -2,7 +2,20 @@ import ArticleListing from '@/Components/ArticleListing';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Head } from '@inertiajs/react';
 
-export default function Dashboard({ auth }) {
+function renderArticles(articles) {
+    return (
+        <div>
+            {articles.map((article, i) => 
+                <ArticleListing 
+                    title={article.title}
+                    description={article.description} 
+                />
+            )}
+        </div>
+    )
+}
+
+export default function Dashboard({ auth, articles }) {
     return (
         <AuthenticatedLayout
             user={auth.user}
@@ -10,10 +23,8 @@ export default function Dashboard({ auth }) {
         >
             <Head title="Dashboard" />
 
-            <ArticleListing />
-            <ArticleListing />
-            <ArticleListing />
-            <ArticleListing />
+            {renderArticles(articles)}
+
         </AuthenticatedLayout>
     );
 }
