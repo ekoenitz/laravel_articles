@@ -62,6 +62,9 @@ How to integrate React into a Laravel project:
 How to add phpmyadmin:
 `https://ecwebservices.medium.com/adding-phpmyadmin-to-laravel-sail-64823687e084`
 
+Enums:
+`https://laravelmaroc.com/articles/using-enums-in-laravel-10-with-example`
+
 ### Troubleshooting
 Docker not working on wsl:
 `https://github.com/docker/for-win/issues/13088#issuecomment-1536365076`
