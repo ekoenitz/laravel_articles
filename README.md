@@ -21,9 +21,9 @@ Start container:
 `sail up -d`
 
 Stop container (when you change .env and docker configurations):
-`sail stop`
+`sail down`
 Sometimes you'll need to run this version of the command and change DB_HOST to mysql in the .env file instead:
-`sail stop -v`
+`sail down -v`
 
 Run server:
 `sail npm run dev`
