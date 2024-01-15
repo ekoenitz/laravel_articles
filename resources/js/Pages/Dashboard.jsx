@@ -7,8 +7,7 @@ function renderArticles(articles) {
         <div>
             {articles.map((article, i) => 
                 <ArticleListing 
-                    title={article.title}
-                    description={article.description} 
+                    article={article}
                 />
             )}
         </div>
