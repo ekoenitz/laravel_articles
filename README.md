@@ -86,6 +86,9 @@ How to add phpmyadmin:
 Enums:
 `https://laravelmaroc.com/articles/using-enums-in-laravel-10-with-example`
 
+Repository pattern in Laravel:
+`https://dev.to/kasenda/use-repository-pattern-with-laravel-e8h`
+
 ### Troubleshooting
 Docker not working on wsl:
 `https://github.com/docker/for-win/issues/13088#issuecomment-1536365076`
