@@ -9,6 +9,13 @@ class ArticleRepository implements ArticleRepositoryInterface
 {
     public function getAll() 
     {
-        return Article::all();
+        return Article::join('users', 'users.id', '=', 'articles.author_id')
+        ->get([
+            'users.name as author_name',
+            'articles.title',
+            'articles.description',
+            'articles.created_at',
+            'articles.genre'
+        ]);
     }
 }

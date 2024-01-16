@@ -8,7 +8,7 @@ export default function ArticleListing({article}) {
                     <div className="font-bold px-6 pt-3 pb-1 text-gray-900">{article.title}</div>
                     <div className="px-6 pt-1 pb-1 text-gray-900">{article.description}</div>
                     <div className="px-6 pt-1 pb-3 text-gray-400 text-sm">
-                        {`${article.genre} | ${article.author_id} | ${article.created_at}`}
+                        {`${article.genre} | ${article.author_name} | ${article.created_at}`}
                     </div>
                 </div>
             </div>
