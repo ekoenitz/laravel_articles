@@ -75,9 +75,6 @@ phpmyadmin:
 Tailwind documentation:
 `https://tailwindcss.com/`
 
-Material UI documentation:
-`https://www.material-tailwind.com/docs/react/select`
-
 ### Tutorials 
 How to integrate React into a Laravel project:
 `https://github.com/aasoru/laravel-inertia-react-sail/blob/main/README.md`
@@ -91,9 +88,6 @@ Enums:
 
 Repository pattern in Laravel:
 `https://dev.to/kasenda/use-repository-pattern-with-laravel-e8h`
-
-Material Tailwind React Laravel install:
-`https://www.material-tailwind.com/docs/html/guide/laravel`
 
 ### Troubleshooting
 Docker not working on wsl:
