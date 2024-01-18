@@ -1,6 +1,6 @@
 import ArticleListing from '@/Components/ArticleListing';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
-import { Head } from '@inertiajs/react';
+import { Head, Link } from '@inertiajs/react';
 import { useState } from 'react';
 
 function renderArticles(articles) {
@@ -29,11 +29,6 @@ export default function Dashboard({ auth, articles }) {
         setFilterValue(text.target.value);
     }
 
-    function applyFilters() {
-        // To-do: Re-call this page's api with filters applieds
-        window.location.reload(false);
-    }
-
     return (
         <AuthenticatedLayout
             user={auth.user}
@@ -57,9 +52,10 @@ export default function Dashboard({ auth, articles }) {
             />
             <button
                 className="w-33 p-2.5 text-white bg-black border rounded-md shadow-sm outline-none appearance-none focus:border-indigo-600"
-                onClick={applyFilters}
             > 
-                Filter
+                <Link href={route("dashboard", {filter_type: filterType, filter_value: filterValue})}>
+                    Filter
+                </Link>
             </button>
             {renderArticles(articles)}
 
