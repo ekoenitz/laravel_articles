@@ -29,6 +29,11 @@ export default function Dashboard({ auth, articles }) {
         setFilterValue(text.target.value);
     }
 
+    function applyFilters() {
+        // To-do: Re-call this page's api with filters applieds
+        window.location.reload(false);
+    }
+
     return (
         <AuthenticatedLayout
             user={auth.user}
@@ -50,6 +55,12 @@ export default function Dashboard({ auth, articles }) {
                 defaultValue={filterValue}
                 onChange={changeFilterValue}
             />
+            <button
+                className="w-33 p-2.5 text-white bg-black border rounded-md shadow-sm outline-none appearance-none focus:border-indigo-600"
+                onClick={applyFilters}
+            > 
+                Filter
+            </button>
             {renderArticles(articles)}
 
         </AuthenticatedLayout>
