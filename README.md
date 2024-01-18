@@ -33,6 +33,12 @@ Then navigate to http://127.0.0.1 (the output says port 8000 but just ignore tha
 
 ### Laravel Operations
 
+##### Logging
+Live log:
+`tail -f storage/logs/laravel.log`
+
+Surround variables with `json_encode()` to get imo the most readable output
+
 ##### Migrations
 Create migration:
 `sail artisan make:migration create_users_table`
