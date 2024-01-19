@@ -95,6 +95,9 @@ Enums:
 Repository pattern in Laravel:
 `https://dev.to/kasenda/use-repository-pattern-with-laravel-e8h`
 
+Access url parameters in React:
+`https://stackoverflow.com/a/75522147`
+
 ### Troubleshooting
 Docker not working on wsl:
 `https://github.com/docker/for-win/issues/13088#issuecomment-1536365076`
