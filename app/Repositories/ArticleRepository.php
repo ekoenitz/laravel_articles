@@ -9,21 +9,13 @@ use Illuminate\Support\Facades\Log;
 
 class ArticleRepository implements ArticleRepositoryInterface 
 {
-    public function getAll($request) 
-    {
-        $query = Article::join('users', 'users.id', '=', 'articles.author_id');
-        
+    private function applyFilter($query, $request) {
+        // To-do: Make filtering by multiple types possible
         $filter_type = $request->get('filter_type');
         $filter_value = $request->get('filter_value');
-        // To-do: Clean up this whole return get business
+
         if (is_null($filter_type) || is_null($filter_value)) {
-            return $query->get([
-                'users.name as author_name',
-                'articles.title',
-                'articles.description',
-                'articles.created_at',
-                'articles.genre'
-            ]);
+            return $query;
         }
 
         switch($filter_type) {
@@ -40,6 +32,15 @@ class ArticleRepository implements ArticleRepositoryInterface
             default:
                 break;
         }
+
+        return $query;
+    }
+
+    public function getAll($request) 
+    {
+        $query = Article::join('users', 'users.id', '=', 'articles.author_id');
+        
+        $query = $this->applyFilter($query, $request);
 
         return $query->get([
             'users.name as author_name',
