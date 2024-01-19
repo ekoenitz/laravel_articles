@@ -98,6 +98,9 @@ Repository pattern in Laravel:
 Access url parameters in React:
 `https://stackoverflow.com/a/75522147`
 
+Localizaiton in React:
+`https://www.freecodecamp.org/news/how-to-add-localization-to-your-react-app/`
+
 ### Troubleshooting
 Docker not working on wsl:
 `https://github.com/docker/for-win/issues/13088#issuecomment-1536365076`
