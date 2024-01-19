@@ -1,0 +1,7 @@
+{
+    "articleFilters.buttons.filter": "Filter",
+    "articleFilters.filters.all": "Show All",
+    "articleFilters.filter.author": "Author",
+    "articleFilters.filter.creatation_date": "Date of Publication",
+    "articleFilters.filter.genre": "Genre"
+}

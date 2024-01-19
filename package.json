@@ -21,6 +21,8 @@
     },
     "dependencies": {
         "@vitejs/plugin-react": "^4.2.1",
+        "i18next": "^23.7.16",
+        "react-i18next": "^14.0.0",
         "react-router-dom": "^6.21.3"
     }
 }
