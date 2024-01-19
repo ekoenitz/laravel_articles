@@ -33,6 +33,12 @@ Then navigate to http://127.0.0.1 (the output says port 8000 but just ignore tha
 
 ### Laravel Operations
 
+##### Logging
+Live log:
+`tail -f storage/logs/laravel.log`
+
+Surround variables with `json_encode()` to get imo the most readable output
+
 ##### Migrations
 Create migration:
 `sail artisan make:migration create_users_table`
@@ -85,6 +91,12 @@ How to add phpmyadmin:
 
 Enums:
 `https://laravelmaroc.com/articles/using-enums-in-laravel-10-with-example`
+
+Repository pattern in Laravel:
+`https://dev.to/kasenda/use-repository-pattern-with-laravel-e8h`
+
+Access url parameters in React:
+`https://stackoverflow.com/a/75522147`
 
 ### Troubleshooting
 Docker not working on wsl:

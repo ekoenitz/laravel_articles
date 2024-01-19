@@ -38,5 +38,6 @@ class Article extends Model
      */
     protected $casts = [
         'genre' => Genres::class,
+        'created_at'  => 'datetime:Y-m-d H:00',
     ];
 }
