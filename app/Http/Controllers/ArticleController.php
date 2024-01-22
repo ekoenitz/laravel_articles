@@ -30,4 +30,15 @@ class ArticleController extends Controller
             'articles' => $this->article_repository->getAll($request)
         ]);
     }
+
+    public function show($id): Response
+    {
+        $article = $this->article_repository->getById($id);
+        if (is_null($article)) {
+            // return error page
+        }
+        return Inertia::render('ArticleView', [
+            'article' => $article
+        ]);
+    }
 }
