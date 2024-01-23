@@ -15,7 +15,7 @@ function renderArticles(articles) {
 }
 
 export default function ArticleView({ auth, article }) {
-    return (
+        return (
         <AuthenticatedLayout
             user={auth.user}
             header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">{article.title}</h2>}
@@ -29,7 +29,7 @@ export default function ArticleView({ auth, article }) {
                     <div className="px-6 pt-1 pb-3 text-gray-400 text-sm">
                         {`${article.genre} | ${article.author_name} | ${article.created_at}`}
                     </div>
-                    <div className="px-6 pt-1 pb-3 text-gray-900">{article.content}</div>
+                    <div className="px-6 pt-1 pb-3 text-gray-900 whitespace-pre-line">{article.content}</div>
                 </div>
             </div>
 
