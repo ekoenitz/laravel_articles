@@ -7,8 +7,8 @@ use App\Models\Article;
 interface ArticleRepositoryInterface 
 {
     public function getAll($request);
-    /*public function getById(Article $article);
-    public function delete(Article $article);
+    public function getById($id);
+    /*public function delete(Article $article);
     public function create(array $attributes);
     public function update(Article $article, array $attributes);*/
 }

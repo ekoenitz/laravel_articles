@@ -44,10 +44,16 @@ class ArticleRepository implements ArticleRepositoryInterface
 
         return $query->get([
             'users.name as author_name',
+            'articles.id',
             'articles.title',
             'articles.description',
             'articles.created_at',
             'articles.genre'
         ]);
+    }
+
+    public function getById($id)
+    {
+        return Article::find($id);
     }
 }

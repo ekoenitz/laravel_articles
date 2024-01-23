@@ -1,4 +1,5 @@
 {
+    "dashboard.title": "Dashboard",
     "articleFilters.buttons.filter": "Filter",
     "articleFilters.filters.all": "Show All",
     "articleFilters.filter.author": "Author",

@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title')->unique();
             $table->string('description');
-            $table->string('content');
+            $table->text('content');
             $table->string('genre');
             $table->unsignedBigInteger('total_views')->default(0);
             $table->unsignedBigInteger('author_id');
