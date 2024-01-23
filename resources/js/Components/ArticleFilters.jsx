@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { Link } from '@inertiajs/react';
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next';
 import { useSearchParams } from 'react-router-dom';
 
 export default function ArticleFilters() {
