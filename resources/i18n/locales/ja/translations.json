@@ -4,5 +4,7 @@
     "articleFilters.filters.all": "すべて",
     "articleFilters.filter.author": "作者",
     "articleFilters.filter.creatation_date": "発行日",
-    "articleFilters.filter.genre": "ジャンル"
+    "articleFilters.filter.genre": "ジャンル",
+    "languages.en": "English",
+    "languages.ja": "日本語"
 }
