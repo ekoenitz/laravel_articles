@@ -1,6 +1,7 @@
 import ArticleListing from '@/Components/ArticleListing';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Head } from '@inertiajs/react';
+import { useTranslation } from 'react-i18next';
 
 function renderArticles(articles) {
     return (
@@ -15,7 +16,8 @@ function renderArticles(articles) {
 }
 
 export default function ArticleView({ auth, article }) {
-        return (
+    const { i18n } = useTranslation();
+    return (
         <AuthenticatedLayout
             user={auth.user}
             header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">{article.title}</h2>}
@@ -29,7 +31,7 @@ export default function ArticleView({ auth, article }) {
                     <div className="px-6 pt-1 pb-3 text-gray-400 text-sm">
                         {`${article.genre} | ${article.author_name} | ${article.created_at}`}
                     </div>
-                    <div className="px-6 pt-1 pb-3 text-gray-900 whitespace-pre-line">{article.content.en}</div>
+                    <div className="px-6 pt-1 pb-3 text-gray-900 whitespace-pre-line">{article.content[i18n.language]}</div>
                 </div>
             </div>
 
