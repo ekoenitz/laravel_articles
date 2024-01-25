@@ -29,7 +29,7 @@ export default function ArticleView({ auth, article }) {
                     <div className="px-6 pt-1 pb-3 text-gray-400 text-sm">
                         {`${article.genre} | ${article.author_name} | ${article.created_at}`}
                     </div>
-                    <div className="px-6 pt-1 pb-3 text-gray-900 whitespace-pre-line">{article.content}</div>
+                    <div className="px-6 pt-1 pb-3 text-gray-900 whitespace-pre-line">{article.content.en}</div>
                 </div>
             </div>
 
