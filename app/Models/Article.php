@@ -40,5 +40,7 @@ class Article extends Model
         'genre' => Genres::class,
         'created_at'  => 'datetime:Y-m-d H:00',
         'content' => 'array',
+        'description' => 'array',
+        'title' => 'array',
     ];
 }

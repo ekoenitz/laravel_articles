@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
-            $table->string('title')->unique();
-            $table->string('description');
+            $table->json('title');
+            $table->json('description');
             $table->json('content');
             $table->string('genre');
             $table->unsignedBigInteger('total_views')->default(0);
