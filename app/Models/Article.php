@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 use App\Enums\Genres;
+use App\Models\User;
 
 class Article extends Model
 {
@@ -43,4 +44,9 @@ class Article extends Model
         'description' => 'array',
         'title' => 'array',
     ];
+
+    public function author()
+    {
+        return $this->belongsTo(User::class, 'author_id');
+    }
 }

@@ -54,6 +54,8 @@ class ArticleRepository implements ArticleRepositoryInterface
 
     public function getById($id)
     {
-        return Article::find($id);
+        $article = Article::find($id);
+        $article->author_name = $article->author->name;
+        return $article;
     }
 }
