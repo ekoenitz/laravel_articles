@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Contract\ArticleRepositoryInterface;
+use App\Enums\SupportedLanguageCodes;
 use App\Http\Controllers\Controller;
 use App\Models\Article;
 use Illuminate\Auth\Events\Registered;
@@ -32,13 +33,12 @@ class ArticleController extends Controller
         ]);
     }
 
-    public function show($id): Response
+    public function show(SupportedLanguageCodes $lang, int $id): Response
     {
-        $article = $this->article_repository->getById($id);
+        $article = $this->article_repository->getLocalizedById($lang, $id);
         if (is_null($article)) {
             // return error page
         }
-        // To-do: Optimize so we only return the active language's version of title etc.
         return Inertia::render('ArticleView', [
             'article' => $article
         ]);

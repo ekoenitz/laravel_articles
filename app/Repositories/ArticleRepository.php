@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\Contract\ArticleRepositoryInterface;
 use App\Enums\ArticleFilterTypes;
+use App\Enums\SupportedLanguageCodes;
 use App\Models\Article;
 use Illuminate\Support\Facades\Log;
 
@@ -56,6 +57,20 @@ class ArticleRepository implements ArticleRepositoryInterface
     {
         $article = Article::find($id);
         $article->author_name = $article->author->name;
+        return $article;
+    }
+
+    public function getLocalizedById($lang, $id) 
+    {
+        $article = $this->getById($id);
+        if (!($lang instanceof SupportedLanguageCodes))
+        {
+            $lang = SupportedLanguageCodes::ENGLISH;
+        }
+        $lang = $lang->value;
+        $article->title = $article->title[$lang];
+        $article->description = $article->description[$lang];
+        $article->content = $article->content[$lang];
         return $article;
     }
 }
