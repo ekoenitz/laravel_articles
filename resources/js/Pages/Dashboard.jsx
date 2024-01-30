@@ -19,7 +19,7 @@ function renderArticles(articles) {
 // Source for dropdown: https://larainfo.com/blogs/react-tailwind-css-dropdowns-menu-example
 export default function Dashboard({ auth, articles }) {
     const { t } = useTranslation();
-
+    
     return (
         <AuthenticatedLayout
             user={auth.user}

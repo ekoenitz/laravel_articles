@@ -7,6 +7,7 @@ use App\Models\Article;
 interface ArticleRepositoryInterface 
 {
     public function getAll($request);
+    public function getAllLocalized($request);
     public function getById($id);
     public function getLocalizedById($lang, $id);
     /*public function delete(Article $article);

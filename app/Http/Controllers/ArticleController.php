@@ -29,10 +29,11 @@ class ArticleController extends Controller
         Log::debug("\n\n\n\nREQEUST: ".json_encode($request->all())."\n\n\n");
         // To-do: Optimize so we only return the active language's version of title etc.
         return Inertia::render('Dashboard', [
-            'articles' => $this->article_repository->getAll($request)
+            'articles' => $this->article_repository->getAllLocalized($request)
         ]);
     }
 
+    // TODO: Make this just use $request so we don't have to do the weird workarounds on the front-end
     public function show(SupportedLanguageCodes $lang, int $id): Response
     {
         $article = $this->article_repository->getLocalizedById($lang, $id);
