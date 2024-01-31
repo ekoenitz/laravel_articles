@@ -1,4 +1,5 @@
 import React from 'react';
+import { router } from '@inertiajs/react';
 import { useTranslation } from 'react-i18next';
 
 export default function LanguageDropdown() {
@@ -6,6 +7,10 @@ export default function LanguageDropdown() {
 
     const changeLanguage = (selected) => {
         i18n.changeLanguage(selected.target.value);
+        router.visit(route().current(), {
+            method: "get",
+            data: {...route().params, lang: i18n.language}
+        });
     }
 
         return (

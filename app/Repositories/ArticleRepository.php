@@ -74,11 +74,12 @@ class ArticleRepository implements ArticleRepositoryInterface
     public function getLocalizedById($lang, $id) 
     {
         $article = $this->getById($id);
-        if (!($lang instanceof SupportedLanguageCodes))
+        // To-do: Make this work for string lang
+        /*if (!($lang instanceof SupportedLanguageCodes))
         {
             $lang = SupportedLanguageCodes::ENGLISH;
-        }
-        $lang = $lang->value;
+        }*/
+        $lang = is_null($lang) ? SupportedLanguageCodes::ENGLISH->value : $lang;
         $article->title = $article->title[$lang];
         $article->description = $article->description[$lang];
         $article->content = $article->content[$lang];
