@@ -8,11 +8,11 @@ export default function LanguageDropdown() {
         i18n.changeLanguage(selected.target.value);
     }
 
-    return (
+        return (
         <div>
             <select 
                 className="w-28 p-2.5 text-gray-500 bg-white border rounded-md shadow-sm outline-none appearance-none focus:border-indigo-600"
-                default={i18n.language}
+                defaultValue={i18n.language}
                 onChange={changeLanguage}
             >
                 <option value="en">{t("languages.en")}</option>
