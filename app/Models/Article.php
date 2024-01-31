@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 use App\Enums\Genres;
+use App\Models\User;
 
 class Article extends Model
 {
@@ -39,5 +40,13 @@ class Article extends Model
     protected $casts = [
         'genre' => Genres::class,
         'created_at'  => 'datetime:Y-m-d H:00',
+        'content' => 'array',
+        'description' => 'array',
+        'title' => 'array',
     ];
+
+    public function author()
+    {
+        return $this->belongsTo(User::class, 'author_id');
+    }
 }

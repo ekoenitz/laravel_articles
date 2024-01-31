@@ -1,6 +1,7 @@
 import ArticleListing from '@/Components/ArticleListing';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Head } from '@inertiajs/react';
+import { useTranslation } from 'react-i18next';
 
 function renderArticles(articles) {
     return (
@@ -15,7 +16,7 @@ function renderArticles(articles) {
 }
 
 export default function ArticleView({ auth, article }) {
-        return (
+    return (
         <AuthenticatedLayout
             user={auth.user}
             header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">{article.title}</h2>}

@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\Contract\ArticleRepositoryInterface;
 use App\Enums\ArticleFilterTypes;
+use App\Enums\SupportedLanguageCodes;
 use App\Models\Article;
 use Illuminate\Support\Facades\Log;
 
@@ -52,8 +53,36 @@ class ArticleRepository implements ArticleRepositoryInterface
         ]);
     }
 
+    public function getAllLocalized($request) {
+        $articles = $this->getAll($request);
+        // To-do: Check lang against SupportedLanguageCodes
+        $lang = $request->get("lang", SupportedLanguageCodes::ENGLISH->value);
+        foreach($articles as $article) {
+            $article->title = $article->title[$lang];
+            $article->description = $article->description[$lang];
+        }
+        return $articles;
+    }
+
     public function getById($id)
     {
-        return Article::find($id);
+        $article = Article::find($id);
+        $article->author_name = $article->author->name;
+        return $article;
+    }
+
+    public function getLocalizedById($lang, $id) 
+    {
+        $article = $this->getById($id);
+        // To-do: Make this work for string lang
+        /*if (!($lang instanceof SupportedLanguageCodes))
+        {
+            $lang = SupportedLanguageCodes::ENGLISH;
+        }*/
+        $lang = is_null($lang) ? SupportedLanguageCodes::ENGLISH->value : $lang;
+        $article->title = $article->title[$lang];
+        $article->description = $article->description[$lang];
+        $article->content = $article->content[$lang];
+        return $article;
     }
 }

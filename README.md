@@ -68,6 +68,10 @@ Get all data in a table that matches a set of conditions (no where clauses = get
 Delete one record that matches the condition:
 `App\Models\User::where(...)->first()->delete()`
 
+##### Troubleshooting
+If changes to api paths aren't taking effect try this:
+`sail artisan route:clear`
+
 # Links
 
 ### Project
