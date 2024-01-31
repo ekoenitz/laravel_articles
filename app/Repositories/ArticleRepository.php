@@ -56,7 +56,7 @@ class ArticleRepository implements ArticleRepositoryInterface
     public function getAllLocalized($request) {
         $articles = $this->getAll($request);
         // To-do: Check lang against SupportedLanguageCodes
-        $lang = $request->get("lang", SupportedLanguageCodes::ENGLISH);
+        $lang = $request->get("lang", SupportedLanguageCodes::ENGLISH->value);
         foreach($articles as $article) {
             $article->title = $article->title[$lang];
             $article->description = $article->description[$lang];
