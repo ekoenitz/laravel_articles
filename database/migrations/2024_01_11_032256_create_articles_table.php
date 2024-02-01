@@ -17,7 +17,7 @@ return new class extends Migration
             $table->json('description');
             $table->json('content');
             $table->string('genre');
-            $table->unsignedBigInteger('total_views')->default(0);
+            $table->unsignedBigInteger('views')->default(0);
             $table->unsignedBigInteger('author_id');
             $table->foreign('author_id')->references('id')->on('users');
             $table->timestamps();

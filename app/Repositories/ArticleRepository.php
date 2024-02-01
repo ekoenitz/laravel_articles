@@ -49,7 +49,8 @@ class ArticleRepository implements ArticleRepositoryInterface
             'articles.title',
             'articles.description',
             'articles.created_at',
-            'articles.genre'
+            'articles.genre',
+            'articles.views',
         ]);
     }
 
