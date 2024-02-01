@@ -5,6 +5,7 @@
     "articleFilters.filter.author": "Author",
     "articleFilters.filter.creatation_date": "Date of Publication",
     "articleFilters.filter.genre": "Genre",
+    "articleInfo.views": "Views",
     "languages.en": "English",
     "languages.ja": "日本語"
 }
