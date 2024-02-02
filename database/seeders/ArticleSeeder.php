@@ -34,6 +34,7 @@ class ArticleSeeder extends Seeder
                 'genre' => Genres::NEWS,
                 'author_id' => 1,
                 'created_at' => Carbon::now(),
+                'viewers' => json_encode([]),
             ],
             [
                 'id' => 2,
@@ -52,6 +53,7 @@ class ArticleSeeder extends Seeder
                 'genre' => Genres::NEWS,
                 'author_id' => 2,
                 'created_at' => Carbon::now(),
+                'viewers' => json_encode([]),
             ],
             [
                 'id' => 3,
@@ -70,6 +72,7 @@ class ArticleSeeder extends Seeder
                 'genre' => Genres::SPORTS,
                 'author_id' => 1,
                 'created_at' => Carbon::now(),
+                'viewers' => json_encode([]),
             ],
             [
                 'id' => 4,
@@ -88,6 +91,7 @@ class ArticleSeeder extends Seeder
                 'genre' => Genres::SPORTS,
                 'author_id' => 2,
                 'created_at' => Carbon::now(),
+                'viewers' => json_encode([]),
             ],
             [
                 'id' => 5,
@@ -106,6 +110,7 @@ class ArticleSeeder extends Seeder
                 'genre' => Genres::CULTURE,
                 'author_id' => 1,
                 'created_at' => Carbon::now(),
+                'viewers' => json_encode([]),
             ],
             [
                 'id' => 6,
@@ -124,6 +129,7 @@ class ArticleSeeder extends Seeder
                 'genre' => Genres::CULTURE,
                 'author_id' => 2,
                 'created_at' => Carbon::now(),
+                'viewers' => json_encode([]),
             ],
             [
                 'id' => 7,
@@ -144,6 +150,7 @@ class ArticleSeeder extends Seeder
                 'genre' => Genres::NEWS,
                 'author_id' => 1,
                 'created_at' => Carbon::now(),
+                'viewers' => json_encode([]),
             ],
             [
                 'id' => 8,
@@ -164,6 +171,7 @@ class ArticleSeeder extends Seeder
                 'genre' => Genres::NEWS,
                 'author_id' => 2,
                 'created_at' => Carbon::now(),
+                'viewers' => json_encode([]),
             ]
         ], 'id');
     }

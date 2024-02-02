@@ -79,7 +79,7 @@ Main webiste:
 `http://127.0.0.1`
 
 phpmyadmin:
-`localhost:800\80`
+`localhost:8080`
 
 ### Resources
 Tailwind documentation:

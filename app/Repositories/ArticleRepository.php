@@ -49,7 +49,8 @@ class ArticleRepository implements ArticleRepositoryInterface
             'articles.title',
             'articles.description',
             'articles.created_at',
-            'articles.genre'
+            'articles.genre',
+            'articles.viewers',
         ]);
     }
 
@@ -60,6 +61,8 @@ class ArticleRepository implements ArticleRepositoryInterface
         foreach($articles as $article) {
             $article->title = $article->title[$lang];
             $article->description = $article->description[$lang];
+            // To-do: Make this happen outside of the localization loop maybe?  Or is this way more efficient...
+            $article->views = sizeof($article->viewers);
         }
         return $articles;
     }
@@ -67,6 +70,7 @@ class ArticleRepository implements ArticleRepositoryInterface
     public function getById($id)
     {
         $article = Article::find($id);
+        $article->addViewer();
         $article->author_name = $article->author->name;
         return $article;
     }
@@ -83,6 +87,7 @@ class ArticleRepository implements ArticleRepositoryInterface
         $article->title = $article->title[$lang];
         $article->description = $article->description[$lang];
         $article->content = $article->content[$lang];
+        $article->views = sizeof($article->viewers);
         return $article;
     }
 }

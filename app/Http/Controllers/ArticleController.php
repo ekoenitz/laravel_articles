@@ -33,7 +33,6 @@ class ArticleController extends Controller
         ]);
     }
 
-    // TODO: Make this just use $request so we don't have to do the weird workarounds on the front-end
     public function show(Request $request): Response
     {
         $id = $request->get('id');
