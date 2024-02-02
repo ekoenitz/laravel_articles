@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 use App\Enums\Genres;
 use App\Models\User;
@@ -19,7 +20,7 @@ class Article extends Model
         'description',
         'content',
         'genre',
-        'total_views',
+        'viewers',
         'author_id',
         'created_at',
     ];
@@ -43,6 +44,7 @@ class Article extends Model
         'content' => 'array',
         'description' => 'array',
         'title' => 'array',
+        'viewers' => 'array',
     ];
 
     public function author()
@@ -51,6 +53,13 @@ class Article extends Model
     }
 
     public function addViewer() {
-        $this->increment('views');
+        if (!in_array(Auth::id(), $this->viewers)) {
+            $viewers = $this->viewers;
+            array_push($viewers, Auth::id());
+            $this->update([
+                'viewers' => $viewers
+            ]);
+            $this->save();
+        }
     }
 }
