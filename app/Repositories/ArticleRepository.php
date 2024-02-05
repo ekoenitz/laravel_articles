@@ -20,7 +20,7 @@ class ArticleRepository implements ArticleRepositoryInterface
         }
 
         switch($filter_type) {
-            // To-do: Find a way to compare correctly without ->value
+            // Note: ->value is required, source: https://php.watch/versions/8.1/enums
             case ArticleFilterTypes::AUTHOR->value:
                 $query = $query->where('name', $filter_value);
                 break;
@@ -78,11 +78,10 @@ class ArticleRepository implements ArticleRepositoryInterface
     public function getLocalizedById($lang, $id) 
     {
         $article = $this->getById($id);
-        // To-do: Make this work for string lang
-        /*if (!($lang instanceof SupportedLanguageCodes))
+        if (!SupportedLanguageCodes::is_supported($lang))
         {
-            $lang = SupportedLanguageCodes::ENGLISH;
-        }*/
+            $lang = SupportedLanguageCodes::ENGLISH->value;
+        }
         $lang = is_null($lang) ? SupportedLanguageCodes::ENGLISH->value : $lang;
         $article->title = $article->title[$lang];
         $article->description = $article->description[$lang];

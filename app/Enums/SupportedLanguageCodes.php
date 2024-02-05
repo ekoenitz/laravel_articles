@@ -12,4 +12,8 @@ enum SupportedLanguageCodes: string
     {
         return array_column(self::cases(), 'name', 'value');
     }
+
+    public static function is_supported($lang_string) {
+        return in_array($lang_string, array_column(self::cases(), 'value'));           
+    }
 }
