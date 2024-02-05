@@ -57,11 +57,10 @@ class ArticleRepository implements ArticleRepositoryInterface
     public function getAllLocalized($request) {
         $articles = $this->getAll($request);
         // To-do: Check lang against SupportedLanguageCodes
-        $lang = $request->get("lang", SupportedLanguageCodes::ENGLISH->value);
+        $lang = $this->validateLanguage($request->get("lang"));
         foreach($articles as $article) {
             $article->title = $article->title[$lang];
             $article->description = $article->description[$lang];
-            // To-do: Make this happen outside of the localization loop maybe?  Or is this way more efficient...
             $article->views = sizeof($article->viewers);
         }
         return $articles;
@@ -78,15 +77,20 @@ class ArticleRepository implements ArticleRepositoryInterface
     public function getLocalizedById($lang, $id) 
     {
         $article = $this->getById($id);
-        if (!SupportedLanguageCodes::is_supported($lang))
-        {
-            $lang = SupportedLanguageCodes::ENGLISH->value;
-        }
-        $lang = is_null($lang) ? SupportedLanguageCodes::ENGLISH->value : $lang;
+        $lang = $this->validateLanguage($lang);
         $article->title = $article->title[$lang];
         $article->description = $article->description[$lang];
         $article->content = $article->content[$lang];
         $article->views = sizeof($article->viewers);
         return $article;
+    }
+
+    private function validateLanguage($lang) 
+    {
+        if (!SupportedLanguageCodes::is_supported($lang))
+        {
+            return SupportedLanguageCodes::ENGLISH->value;
+        }
+        return is_null($lang) ? SupportedLanguageCodes::ENGLISH->value : $lang;
     }
 }
