@@ -3,7 +3,7 @@
     "articleFilters.buttons.filter": "フィルター",
     "articleFilters.filters.all": "すべて",
     "articleFilters.filter.author": "作者",
-    "articleFilters.filter.creatation_date": "発行日",
+    "articleFilters.filter.creation_date": "発行日",
     "articleFilters.filter.genre": "ジャンル",
     "articleInfo.views": "閲覧数",
     "languages.en": "English",
