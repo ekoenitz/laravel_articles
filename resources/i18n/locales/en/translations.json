@@ -6,6 +6,7 @@
     "articleFilters.filter.creation_date": "Date of Publication",
     "articleFilters.filter.genre": "Genre",
     "articleInfo.views": "Views",
+    "errors.article_not_found": "Error: Article not found",
     "languages.en": "English",
     "languages.ja": "日本語"
 }

@@ -36,12 +36,12 @@ class ArticleController extends Controller
     {
         $id = $request->get('id');
         if (is_null($id)) {
-            // return error page
+            return Inertia::render('ArticleNotFound');
         }
         $lang = $request->get('lang', SupportedLanguageCodes::ENGLISH->value);
         $article = $this->article_repository->getLocalizedById($lang, $id);
         if (is_null($article)) {
-            // return error page
+            return Inertia::render('ArticleNotFound');
         }
         return Inertia::render('ArticleView', [
             'article' => $article

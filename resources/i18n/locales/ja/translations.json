@@ -6,6 +6,7 @@
     "articleFilters.filter.creation_date": "発行日",
     "articleFilters.filter.genre": "ジャンル",
     "articleInfo.views": "閲覧数",
+    "errors.article_not_found": "エラー：記事は見つかれません",
     "languages.en": "English",
     "languages.ja": "日本語"
 }
