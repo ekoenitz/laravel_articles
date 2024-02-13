@@ -28,6 +28,11 @@ export default function Authenticated({ user, header, children }) {
                                         Dashboard
                                     </LocalizedLink>
                                 </NavLink>
+                                <NavLink>
+                                    <LocalizedLink path="create">
+                                        Create
+                                    </LocalizedLink>
+                                </NavLink>
                             </div>
                         </div>
 

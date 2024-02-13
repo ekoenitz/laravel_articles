@@ -47,4 +47,11 @@ class ArticleController extends Controller
             'article' => $article
         ]);
     }
+
+    public function show_create(Request $request): Response
+    {
+        return Inertia::render('CreateView', [
+            //'article' => $article
+        ]);
+    }
 }
