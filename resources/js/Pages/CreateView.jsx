@@ -5,10 +5,11 @@ import { Head } from '@inertiajs/react';
 import { useTranslation } from 'react-i18next';
 
 export default function ArticleView({ auth }) {
+    const { t } = useTranslation();
     return (
         <AuthenticatedLayout
             user={auth.user}
-            header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">create</h2>}
+            header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">{t("create.title")}</h2>}
         >
             <Head title="Article" />
 
