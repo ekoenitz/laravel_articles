@@ -1,5 +1,8 @@
 {
+    "menu.dashboard": "Dashboard",
+    "menu.create": "Create",
     "dashboard.title": "Dashboard",
+    "create.title": "Article Creation",
     "articleFilters.buttons.filter": "Filter",
     "articleFilters.filters.all": "Show All",
     "articleFilters.filter.author": "Author",

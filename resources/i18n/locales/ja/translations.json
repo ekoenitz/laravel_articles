@@ -1,5 +1,8 @@
 {
+    "menu.dashboard": "ダッシュボード",
+    "menu.create": "作成",
     "dashboard.title": "ダッシュボード",
+    "create.title": "作成",
     "articleFilters.buttons.filter": "フィルター",
     "articleFilters.filters.all": "すべて",
     "articleFilters.filter.author": "作者",

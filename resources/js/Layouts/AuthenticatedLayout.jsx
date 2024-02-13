@@ -6,9 +6,11 @@ import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
 import { Link } from '@inertiajs/react';
 import LanguageDropdown from '@/Components/LanguageDropdown';
 import LocalizedLink from '@/Components/LocalizedLink';
+import { useTranslation } from 'react-i18next';
 
 export default function Authenticated({ user, header, children }) {
     const [showingNavigationDropdown, setShowingNavigationDropdown] = useState(false);
+    const { t } = useTranslation();
 
     return (
         <div className="min-h-screen bg-gray-100">
@@ -25,12 +27,12 @@ export default function Authenticated({ user, header, children }) {
                             <div className="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                                 <NavLink>
                                     <LocalizedLink path="dashboard">
-                                        Dashboard
+                                        {t("menu.dashboard")}
                                     </LocalizedLink>
                                 </NavLink>
                                 <NavLink>
                                     <LocalizedLink path="create">
-                                        Create
+                                        {t("menu.create")}
                                     </LocalizedLink>
                                 </NavLink>
                             </div>
