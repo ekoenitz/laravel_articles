@@ -50,7 +50,7 @@ class ArticleController extends Controller
 
     public function show_create(Request $request): Response
     {
-        return Inertia::render('CreateView', [
+        return Inertia::render('ArticleCreate', [
             //'article' => $article
         ]);
     }
