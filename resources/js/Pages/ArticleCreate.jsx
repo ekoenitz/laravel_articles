@@ -1,5 +1,3 @@
-import ArticleInfo from '@/Components/ArticleInfo';
-import ArticleListing from '@/Components/ArticleListing';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Head } from '@inertiajs/react';
 import { useState } from 'react';
