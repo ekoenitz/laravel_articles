@@ -24,7 +24,7 @@ export default function ArticleView({ auth }) {
 
             <div className="pb-3"/>
             <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div className="bg-white bg-auto hover:bg-sky-100 overflow-hidden shadow-sm sm:rounded-lg">
+                <div>
                     <ArticleEdit
                         header={t("articleCreate.headers.title")}
                         value={title}
