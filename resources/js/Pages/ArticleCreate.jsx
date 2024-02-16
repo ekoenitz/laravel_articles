@@ -13,7 +13,6 @@ export default function ArticleView({ auth }) {
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [content, setContent] = useState("");
-    console.log(content)
 
     return (
         <AuthenticatedLayout
