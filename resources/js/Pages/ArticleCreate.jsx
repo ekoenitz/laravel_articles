@@ -13,7 +13,7 @@ export default function ArticleView({ auth }) {
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [content, setContent] = useState("");
-    console.log(title)
+    console.log(content)
 
     return (
         <AuthenticatedLayout
@@ -39,6 +39,7 @@ export default function ArticleView({ auth }) {
                         header={t("articleCreate.headers.content")}
                         value={content}
                         onChange={updateValue(setContent)}
+                        isBig
                     />
                 </div>
             </div>
