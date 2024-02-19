@@ -8,7 +8,7 @@ const updateValue = (setFunction) => (event) => {
     setFunction(event.target.value);
 }
 
-export default function ArticleView({ auth }) {
+export default function ArticleCreate({ auth }) {
     const { t } = useTranslation();
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
