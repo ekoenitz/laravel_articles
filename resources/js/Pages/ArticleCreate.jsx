@@ -38,7 +38,7 @@ export default function ArticleCreate({ auth }) {
                         header={t("articleCreate.headers.content")}
                         value={content}
                         onChange={updateValue(setContent)}
-                        isBig
+                        isMultiLine
                     />
                 </div>
             </div>
