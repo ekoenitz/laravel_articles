@@ -6,6 +6,7 @@
     "articleCreate.headers.title": "記事名",
     "articleCreate.headers.description": "説明",
     "articleCreate.headers.content": "内容",
+    "articleCreate.buttons.submit": "作成",
     "articleFilters.buttons.filter": "フィルター",
     "articleFilters.filters.all": "すべて",
     "articleFilters.filter.author": "作者",

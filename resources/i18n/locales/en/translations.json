@@ -6,6 +6,7 @@
     "articleCreate.headers.title": "Title",
     "articleCreate.headers.description": "Description",
     "articleCreate.headers.content": "Content",
+    "articleCreate.buttons.submit": "Create",
     "articleFilters.buttons.filter": "Filter",
     "articleFilters.filters.all": "Show All",
     "articleFilters.filter.author": "Author",

@@ -40,6 +40,9 @@ export default function ArticleCreate({ auth }) {
                         onChange={updateValue(setContent)}
                         isMultiLine
                     />
+                    <button class="w-11/12 ml-14 bg-black hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+                        {t("articleCreate.buttons.submit")}
+                    </button>
                 </div>
             </div>
 
