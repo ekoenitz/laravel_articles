@@ -84,6 +84,19 @@ class ArticleRepository implements ArticleRepositoryInterface
         return $article;
     }
 
+    public function createOneLanguage($title, $description, $content, $lang, $user_id) {
+        // TO-DO: Clean up
+        Article::create([
+            'title' => json_encode([$lang => $title]),
+            'description' => json_encode([$lang => $description]),
+            'content' => json_encode([$lang => $content]),
+            'genre' => Genres::NEWS,
+            'author_id' => $user_id,
+            'created_at' => Carbon::now(),
+            'viewers' => json_encode([])
+        ]);
+    }
+
     private function validateLanguage($lang) 
     {
         if (!SupportedLanguageCodes::is_supported($lang))

@@ -10,6 +10,7 @@ interface ArticleRepositoryInterface
     public function getAllLocalized($request);
     public function getById($id);
     public function getLocalizedById($lang, $id);
+    public function createOneLanguage($title, $description, $content, $lang, $user_id);
     /*public function delete(Article $article);
     public function create(array $attributes);
     public function update(Article $article, array $attributes);*/
